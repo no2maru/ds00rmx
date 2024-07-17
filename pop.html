@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Popcat Game</title>
+<style>
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+        background-image: url('poooop.jpg'); /* 배경 이미지 경로 */
+        background-size: cover;
+        font-family: Arial, sans-serif;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgba(255, 255, 255, 0.8); /* 배경 색상 (투명도 조절 가능) */
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+    }
+    .popcat {
+        width: 200px;
+        height: 200px;
+        background-image: url('poop.jpg'); /* 첫 번째 이미지 경로 */
+        background-size: cover;
+        cursor: pointer;
+        margin-bottom: 20px;
+        transition: transform 0.2s ease-in-out; /* 입이 벌리는 애니메이션 */
+    }
+    .popcat.open-mouth {
+        background-image: url('pooop.jpg'); /* 두 번째 이미지 경로 */
+        transform: scale(1.1); /* 입을 벌릴 때 크기 조정 */
+    }
+    .click-count {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <div class="popcat" id="popcat"></div>
+    <div class="click-count" id="clickCount">클릭 수: 0</div>
+</div>
+<script src="popcat.js"></script>
+</body>
+</html>
